@@ -2,7 +2,6 @@ import Boost from './components/Boost';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ShortenLink from './components/ShortenLink';
-// import ShortenBox from './components/ShortenBox';
 import Statistics from './components/Statistics';
 
 function App() {
