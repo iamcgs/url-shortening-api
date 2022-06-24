@@ -7,7 +7,7 @@ function Navbar() {
   const handleClick = () => setOpenMenu(!openMenu);
 
   return (
-    <nav className="relative flex items-center justify-between bg-white px-6 pt-12 pb-6 md:gap-10">
+    <nav className="relative flex items-center justify-between bg-white px-6 pt-12 pb-6 md:gap-10 lg:px-24">
       <div>
         <img src={Logo} alt="Shortly Logo" />
       </div>

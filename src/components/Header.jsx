@@ -4,11 +4,11 @@ import Navbar from './Navbar';
 
 function Header() {
   return (
-    <header className="lg:px-24">
+    <header>
       <Navbar />
       <section className="flex flex-col items-center bg-white lg:flex-row">
         <div className="flex-2 mx-auto h-screen w-full bg-hero bg-cover md:order-2"></div>
-        <div className="flex flex-col items-center justify-between gap-4 py-10 px-6 text-center md:order-1">
+        <div className="flex flex-col items-center justify-between gap-4 py-10 px-6 text-center md:order-1 lg:pl-24">
           <h2 className="text-4xl font-bold text-darkViolet lg:text-left lg:text-5xl">
             More than just shorter links
           </h2>
