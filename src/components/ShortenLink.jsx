@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+import CopyBtn from './CopyBtn';
 
 function ShortenLink() {
   const [link, setLink] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState([]);
-  const [isCopied, setIsCopied] = useState(false);
   const [noLinkError, setNoLinkError] = useState(false);
   const [invalidUrlError, setInvalidUrlError] = useState(false);
 
@@ -80,29 +80,18 @@ function ShortenLink() {
               <div className="mx-6 mb-6 flex flex-col items-center justify-between gap-4 rounded-xl bg-white py-6 lg:mx-48">
                 <h3
                   className="w-[90%] text-left text-lg font-semibold tracking-wide"
-                  key={url.full_short_link}
+                  key={url.original_link}
                 >
                   {url.original_link}
                 </h3>
                 <hr className="w-full border bg-slate-100" />
                 <h3
                   className="w-[90%] text-left text-lg font-semibold tracking-wide text-cyanClr"
-                  key={url.code}
+                  key={url.short_link}
                 >
                   {url.short_link}
                 </h3>
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(url.short_link);
-                    setIsCopied(true);
-                    setTimeout(() => {
-                      setIsCopied(false);
-                    }, 3000);
-                  }}
-                  className={isCopied ? 'copied-btn' : 'copy-btn'}
-                >
-                  {isCopied ? 'Copied!' : 'Copy'}
-                </button>
+                <CopyBtn url={url} />
               </div>
             );
           })}

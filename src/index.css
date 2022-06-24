@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply mx-auto max-w-[1440px] font-Poppins drop-shadow-md;
+    @apply mx-auto max-w-[1440px] font-Poppins;
   }
 
   .btn {
