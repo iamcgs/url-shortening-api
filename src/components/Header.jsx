@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 
 function Header() {
   return (
-    <header className="px-12">
+    <header className="lg:px-24">
       <Navbar />
       <section className="flex flex-col items-center bg-white lg:flex-row">
         <div className="flex-2 mx-auto h-screen w-full bg-hero bg-cover md:order-2"></div>
