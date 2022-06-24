@@ -15,7 +15,7 @@ function CopyBtn({ url }) {
   return (
     <button
       onClick={() => {
-        handleCopy(url.short_link, url.code);
+        handleCopy(url.short_link);
       }}
       key={url.code}
       className={isCopied ? 'copied-btn' : 'copy-btn'}
